@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ 	<head>
+		<title>Login Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+ 	</head>
+ 	<body>
+ 	<section class="mainsection">
+		<div class="formSection">
+			<form name="loginForm" method="POST" id="loginForm">
+				<div>
+					<span class="signText">Sign In</span>
+				</div>
+				<div>
+					<input type="text" id="email" placeholder="EMAIL*"/>
+					<span id="validEmailMsg" class="errorLabel" style="display: none"></span>
+				</div>
+				<div>
+					<input type="password" id="password" placeholder="PASSWORD*"/>
+					<span id="validPasswordMsg" class="errorLabel" style="display: none"></span>
+				</div>
+				<div>
+					<button name="data" type="button" onclick="validate()">NEXT ➩</button>
+				</div>
+			</form>
+			<p style="text-align:right"><a href="#">Forgot Password</a></p>
+			<p style="text-align:right">Not a Member? -<a href="#"> Start for Free</a></p>
+		</div>
+ 	</section>
+	<script src="js/main.js"></script>
+	</body>
+</html>
+
