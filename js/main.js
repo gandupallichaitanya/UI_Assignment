@@ -5,16 +5,19 @@ function validate(){
 	var password = document.getElementById("password").value;
 	var passwordMsg = document.getElementById("validPasswordMsg")
 	var passRegExp = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{6,}$/;
+	var emailFlag = false;
+	var passwordFlag = false;
 	
 	if (email == ""){
 		document.getElementById("validEmailMsg").innerHTML='Please Enter Email Id';
-		emailMsg.style.display = "block";
+		emailMsg.style.display = "block";	
 	}
 	else if(!emailRegExp.test(email)){
 		document.getElementById("validEmailMsg").innerHTML='Please Enter Valid Email Id (Example: chaitanya@gmail.com)';
 		emailMsg.style.display = "block";
 	}else{
 		emailMsg.style.display = "none";
+		emailFlag = true;
 	}
 	
 	if(password == ""){
@@ -31,5 +34,14 @@ function validate(){
 	}
 	else{
 		passwordMsg.style.display = "none";
+		passwordFlag = true;
 	}
+
+	/* Once user submitted correct username and password then this block will execute */
+	if(emailFlag && passwordFlag){
+		alert('Login Successful');
+		document.getElementById("email").value = '';
+		document.getElementById("password").value = '';
+	}
+
 }
